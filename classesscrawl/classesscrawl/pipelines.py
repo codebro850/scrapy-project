@@ -29,9 +29,6 @@ class MongoDBPipeline:
                 valid = False
                 raise DropItem("Missing {0}!".format(data))
         if valid:
-            
             self.db["classes"].insert_one(dict(item))
-                # log.msg("Question added to MongoDB database!",
-                #         level=log.DEBUG, spider=spider)
         return item
   
